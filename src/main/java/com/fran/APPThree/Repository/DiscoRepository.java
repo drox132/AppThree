@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DiscoRepository extends JpaRepository <Disco, Integer> {
 
-    @Query (value= "select * from disco where id= :iduser ")
+    @Query (value= "select * from disco where id= :iduser " , nativeQuery = true)
     Disco selectDiscoById(@Param("iduser") int id);
 
 
