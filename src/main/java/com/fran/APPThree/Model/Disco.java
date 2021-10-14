@@ -15,11 +15,11 @@ import javax.persistence.Table;
 @NoArgsConstructor
 public class Disco {
     @Id
-    int id;
-    String name;
-    int price;
-    String gender;
-    int age;
+    private int id;
+    private String name;
+    private int price;
+    private String gender;
+    private int age;
 
     public Disco(int id, String name, int price, String gender, int age) {
         this.id = id;
