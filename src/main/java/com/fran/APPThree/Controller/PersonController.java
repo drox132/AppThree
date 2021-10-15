@@ -18,6 +18,8 @@ public class PersonController {
     public PersonController(PersonService personService) {
         this.personService = personService;
     }
+
+
     @PostMapping ("/verify")
     String verifyData (@RequestBody VerifyDateRequestDto verifyDateRequestDto ) {
 
