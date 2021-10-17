@@ -28,7 +28,7 @@ public class PersonServiceImplementation implements PersonService {
 
     @Override
     public Person SavePerson(Person person) {
-        return personRepository.savePerson(person.getAge(),person.getGender(),person.getMoney()) ;
+        return personRepository.savePerson(person.getAge(),person.getGender(),person.getMoney(), person.getName()) ;
     }
 
     @Override
@@ -40,7 +40,7 @@ public class PersonServiceImplementation implements PersonService {
             if(verifyDateRequestDto.getAge() <21 || verifyDateRequestDto.getMoney()<300) {
                 return NO_PASA;
             }
-            this.SavePerson(new Person(verifyDateRequestDto.getAge(),verifyDateRequestDto.getMoney(), verifyDateRequestDto.getGender()));
+            this.SavePerson(new Person(verifyDateRequestDto.getAge(),verifyDateRequestDto.getMoney(), verifyDateRequestDto.getGender(), verifyDateRequestDto.getName()));
             return PASA;
         }
 
@@ -48,7 +48,7 @@ public class PersonServiceImplementation implements PersonService {
             if(verifyDateRequestDto.getAge()<18 || verifyDateRequestDto.getMoney()<200 || verifyDateRequestDto.getGender() != "female") {
                 return NO_PASA;
             }
-            this.SavePerson(new Person(verifyDateRequestDto.getAge(),verifyDateRequestDto.getMoney(), verifyDateRequestDto.getGender()));
+            this.SavePerson(new Person(verifyDateRequestDto.getAge(),verifyDateRequestDto.getMoney(), verifyDateRequestDto.getGender(), verifyDateRequestDto.getName()));
 
             return PASA;
         }
@@ -57,7 +57,7 @@ public class PersonServiceImplementation implements PersonService {
             if(verifyDateRequestDto.getAge()<17 || verifyDateRequestDto.getMoney()<100 || verifyDateRequestDto.getGender() != "male") {
                 return NO_PASA;
             }
-            this.SavePerson(new Person(verifyDateRequestDto.getAge(),verifyDateRequestDto.getMoney(), verifyDateRequestDto.getGender()));
+            this.SavePerson(new Person(verifyDateRequestDto.getAge(),verifyDateRequestDto.getMoney(), verifyDateRequestDto.getGender(), verifyDateRequestDto.getName()));
 
             return PASA;
         }

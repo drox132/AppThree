@@ -9,6 +9,7 @@ public class VerifyDateRequestDto {
     private String gender;
     private int money;
     private int idDisco;
+    private  String name;
 
 
 
